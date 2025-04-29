@@ -1,25 +1,30 @@
 fx_version 'cerulean'
 game 'rdr3'
 
+rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aware my resources *will* become incompatible once RedM ships.'
+
 author 'Star Studios'
-description 'Star Tools - Cross-framework dev toolkit for RedM'
+description 'Universal Development Framework for RedM'
 version '1.0.0'
 
+shared_scripts {
+    'star.lua',
+    'config.lua'
+}
+
 server_scripts {
-    'config.lua',
-    'server/bridge.lua',
-    'server/player.lua',
-    'server/inventory.lua',
-    'server/money.lua',
-    'server/events.lua',
+    'framework/init.lua',
+    'inventory/init.lua',
+    'notifications/init.lua',
+
+    'modules/animations.lua',
+
+    'server/utils.lua',
+    'server/commands.lua',
+    'server/debug.lua'
 }
 
 client_scripts {
-    'client/notify.lua',
-    'client/animation.lua',
-    'client/ui.lua',
-    'client/menu.lua',
-    'client/bridge.lua',
+    'client/utils.lua',
+    'client/debug.lua'
 }
-
-provide 'star'
