@@ -1,2 +1,4 @@
 Config = {}
-Config.Framework = "QBR" -- Change to VORP / REDM / RSG as needed
+
+-- Auto-detects framework unless set manually to: "vorp", "rsg", "redmrp", "qbcore", "custom"
+Config.Framework = "auto"
